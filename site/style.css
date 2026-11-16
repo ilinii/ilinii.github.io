@@ -39,3 +39,12 @@ html[data-motion=paused]{scroll-behavior:auto}html[data-motion=paused] .hero-pro
 @media(prefers-reduced-motion:reduce){.voice-words>span{animation:none}}
 
 .ascii-hands{height:1120px;bottom:auto}@media(max-width:600px){.ascii-hands{height:980px}}
+
+/* Keep the full finger silhouettes clear of the product frame. */
+.hero-product{margin-top:320px}
+@media(max-width:600px){.hero-product{margin-top:280px}}
+
+/* The live trial is a separate stop in the page, reached by Try your voice. */
+.voice-demo{margin-top:0;min-height:600px;padding-block:90px}
+.voice-intro>p.voice-permission{font-size:12px}
+@media(max-width:600px){.voice-demo{min-height:0;padding-block:65px;gap:32px}}

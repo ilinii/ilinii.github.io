@@ -57,7 +57,7 @@ export function createHands(canvas,motionAllowed){
   const ro=new ResizeObserver(resize);ro.observe(canvas);
   const io=new IntersectionObserver(entries=>{visible=entries[0]?.isIntersecting??false;if(visible){dirty=true;draw();}});io.observe(canvas);
   const move=e=>{targetPointer=(e.clientX/window.innerWidth-.5)*2;};window.addEventListener('pointermove',move,{passive:true});
-  fetch(new URL('./creation-hands.bin',import.meta.url),{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Hand artwork unavailable');return r.arrayBuffer();}).then(buffer=>{
+  fetch(new URL('./creation-hands.bin?v=open-fingers-1',import.meta.url),{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Hand artwork unavailable');return r.arrayBuffer();}).then(buffer=>{
     if(disposed)return;const head=new DataView(buffer),w=head.getUint32(0,true),h=head.getUint32(4,true);
     if(!w||!h||w>2048||h>1024||buffer.byteLength!==8+w*h*2)throw Error('Invalid hand artwork');
     source={width:w,height:h,data:new Uint8Array(buffer,8)};canvas.dataset.artwork='anatomical';dirty=true;draw();

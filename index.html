@@ -16,7 +16,7 @@
   <link rel="icon" href="/buddy.png" type="image/png">
   <link rel="preload" href="/site/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/site/editorial.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/site/style.css?v=voice-1">
+  <link rel="stylesheet" href="/site/style.css?v=voice-public-2">
   <title>Buddy — Stay with the conversation.</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
         <p class="eyebrow"><span class="status-dot"></span> A LITTLE HELP FOR EVERY MEETING</p>
         <h1 id="hero-title">Stay with the<br><em>conversation.</em></h1>
         <p class="hero-description">Buddy keeps the notes, the next steps and the context.<br class="desktop-break"> You can be there for the conversation.</p>
-        <div class="hero-actions"><a class="button primary" href="/app/?demo=home">Try Buddy <span aria-hidden="true">↓</span></a><a class="button quiet" href="/app/?demo=home">Explore Buddy <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button primary" href="#voice-demo">Try your voice <span aria-hidden="true">↓</span></a><a class="button quiet" href="/app/?demo=home">Explore Buddy <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="hero-product app-frame" data-visual aria-label="Interactive preview of a sample Buddy meeting">
         <div class="preview-top"><span class="preview-brand"><img src="/brand/keepsake-mark.png" width="17" height="17" alt="">buddy.</span><span class="preview-breadcrumb">/ <span>Product check-in</span></span><span class="sample-tag">SAMPLE MEETING</span><span class="preview-menu" aria-hidden="true">···</span></div>
@@ -43,9 +43,14 @@
           <div class="preview-capture"><div class="capture-heading"><span class="capture-led"></span><span id="sample-state">A conversation, kept.</span><span id="sample-time">04:12</span></div><div class="waveform" id="hero-wave" aria-hidden="true"></div><p id="rolling-text">“Let’s test the new welcome flow with the team before we add anything else.”</p><button class="replay-button" id="replay-sample" aria-label="Replay sample transcript"><span class="play-icon" aria-hidden="true">▶</span><span>Replay the moment</span><span aria-hidden="true">↗</span></button><div class="capture-foot">Your notes stay yours to edit.</div></div>
         </div>
       </div>
-      
+
       <div class="hero-bottom wrap"><span>Notes. Transcripts. A place for what comes next.</span><a href="#product" aria-label="Explore the workspace"><span aria-hidden="true">↓</span></a><span>MEETING SPACE, MADE PERSONAL</span></div>
     </section>
+
+      <section class="voice-demo wrap" id="voice-demo" data-gateway="https://buddy-voice-trial.lovely-ash-3133.chatgpt.site" aria-labelledby="voice-title" data-state="idle">
+        <div class="voice-intro"><p class="eyebrow">YOUR VOICE / IN REAL TIME</p><h2 id="voice-title">Your voice.<br><em>In writing.</em></h2><p>Try the same Deepgram Nova-3 speech engine used in Buddy. A 45-second microphone sample, right here.</p><button class="button primary" type="button">Try live transcription <span aria-hidden="true">↗</span></button><p class="voice-permission">Starting sends microphone audio to Deepgram with model-training opt-out enabled. No audio or transcript is saved by this demo. <a href="/privacy.html">How it works ↗</a></p></div>
+        <div class="voice-output"><div class="voice-output-head"><span class="voice-live-dot" aria-hidden="true"></span><span role="status" aria-live="polite">Ready when you are.</span><time aria-label="Time remaining">00:45</time></div><div class="voice-words" role="log" aria-label="Live demo transcript" aria-live="off"></div><span class="voice-empty" aria-hidden="true">A thought. An idea. Your next meeting.</span><p class="voice-speakers"></p></div>
+      </section>
 
     <section class="workflow section-dark" id="product" aria-labelledby="workflow-title">
       <div class="wrap section-content">
@@ -112,6 +117,6 @@
   </main>
   <button class="motion-toggle" id="motion-toggle" aria-pressed="false" aria-label="Pause ambient animation"><span aria-hidden="true">Ⅱ</span><span class="motion-label">Pause motion</span></button>
   <dialog id="source-dialog" class="source-dialog"><div class="source-dialog-top"><span id="source-kind">MEETING TRANSCRIPT</span><button aria-label="Close source" class="close-source">×</button></div><h2 id="source-title">Product check-in</h2><p class="source-location" id="source-location">04:12 · Final transcript</p><blockquote id="source-quote">“Let’s test the new welcome flow with the team before we add anything else.”</blockquote><p class="source-disclaimer">Fictional content used to demonstrate source checking.</p><a href="/app/?demo=home" class="button primary">Explore the full workspace <span aria-hidden="true">↗</span></a></dialog>
-  <script type="module" src="/site/main.js?v=voice-1"></script>
+  <script type="module" src="/site/main.js?v=voice-public-2"></script>
 </body>
 </html>

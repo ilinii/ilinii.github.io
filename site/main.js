@@ -1,4 +1,5 @@
-import {createHands} from './hands.js?v=setup-3';
+import {setupVoiceDemo} from './voice.js?v=voice-public-2';
+import {createHands} from './hands.js?v=open-fingers-1';
 
 const preference=matchMedia('(prefers-reduced-motion: reduce)');
 let paused=preference.matches;
@@ -80,4 +81,4 @@ document.addEventListener('keydown',event=>{if(menu.hidden)return;if(event.key==
 matchMedia('(min-width:601px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
 document.querySelector('#year').textContent=String(new Date().getFullYear());
 
-
+setupVoiceDemo();
