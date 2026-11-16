@@ -21,7 +21,7 @@ export function createHands(canvas,motionAllowed){
     ctx.clearRect(0,0,width,height);
     const mobile=width<600,cw=width/columns,ch=height/rows;
     const artWidth=width*(mobile?1.8:1.08),artHeight=artWidth*source.height/source.width;
-    const tipY=height*(mobile?.46:.56),artY=tipY-artHeight*.49,artX=(width-artWidth)/2;
+    const tipY=height*(mobile?.46:.58),artY=tipY-artHeight*.49,artX=(width-artWidth)/2;
     // Move each whole hand gently; preserve the sampled finger anatomy and fingertip gap.
     const driftLeft=Math.sin(time*.55)*2.6,driftRight=Math.sin(time*.55+.7)*2.6;
     const separation=4.5+Math.sin(time*.65)*3+pointer*.65;

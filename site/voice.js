@@ -6,7 +6,7 @@ export function setupVoiceDemo(){
  let run=null,disposed=false;
  const draw=text=>{const words=text.trim().split(/\s+/).filter(Boolean),nodes=[...output.children];let stable=0;while(stable<words.length&&nodes[stable]?.textContent===words[stable]+' ')stable++;nodes.slice(stable).forEach(n=>n.remove());for(const word of words.slice(stable)){const span=document.createElement('span');span.textContent=word+' ';output.append(span);}output.scrollTop=output.scrollHeight;};
  const cleanup=async sample=>{clearInterval(sample.timer);clearTimeout(sample.connectTimer);sample.stream?.getTracks().forEach(t=>t.stop());try{sample.node?.disconnect();sample.source?.disconnect();await sample.context?.close();}catch{};};
- const reset=(sample,message)=>{if(run!==sample)return;run=null;void cleanup(sample);button.disabled=false;button.textContent='Try your voice again';host.dataset.state='idle';status.textContent=message;};
+ const reset=(sample,message)=>{if(run!==sample)return;run=null;void cleanup(sample);button.disabled=false;button.textContent='Start again';host.dataset.state='idle';status.textContent=message;};
  async function stop(){const sample=run;if(!sample||sample.stopping)return;sample.stopping=true;button.disabled=true;status.textContent='Saving the final words…';host.dataset.state='finishing';if(sample.node){await new Promise(resolve=>{sample.flush=resolve;sample.node.port.postMessage('flush');setTimeout(resolve,250);});}sample.audioClosed=true;await cleanup(sample);if(sample.socket?.readyState===WebSocket.OPEN){sample.socket.send('stop');sample.closeTimer=setTimeout(()=>{sample.socket?.close();reset(sample,'The connection ended before finalization. Only finalized words are shown.');},9000);}else{sample.socket?.close();reset(sample,'Demo stopped.');}}
  async function start(){
   if(run){await stop();return;}
@@ -58,5 +58,5 @@ export function setupVoiceDemo(){
  button.addEventListener('click',start);
  const hidden=()=>{if(document.hidden&&run)void stop();};document.addEventListener('visibilitychange',hidden);
  const unload=()=>{disposed=true;const sample=run;if(sample){run=null;clearTimeout(sample.closeTimer);void cleanup(sample);sample.socket?.close();}};window.addEventListener('pagehide',unload);
- window.addEventListener('pageshow',event=>{if(event.persisted&&disposed){disposed=false;button.disabled=false;button.textContent='Try live transcription';status.textContent='Ready when you are.';}});
+ window.addEventListener('pageshow',event=>{if(event.persisted&&disposed){disposed=false;button.disabled=false;button.textContent='Start speaking';status.textContent='Ready when you are.';}});
 }
