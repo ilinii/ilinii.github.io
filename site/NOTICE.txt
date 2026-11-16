@@ -1,0 +1,6 @@
+Buddy website ASCII rendering and interface composition are original project work.
+The hand source is an original image generated with OpenAI imagegen, inspired by the public-domain Creation of Adam gesture. It replaces the initial procedural finger geometry.
+Geist is distributed under its accompanying SIL Open Font License (Geist-LICENSE.txt).
+EB Garamond is distributed under its accompanying SIL Open Font License (EB-Garamond-OFL.txt).
+Font sources: https://fonts.google.com/specimen/Geist and https://fonts.google.com/specimen/EB+Garamond.
+The Buddy browser application includes dependency licenses in /third-party/.
