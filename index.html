@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="en" data-type="software">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8"><script>if(location.protocol==='http:'&&/^(www\.)?meetbuddy\.me$/.test(location.hostname))location.replace('https://meetbuddy.me'+location.pathname+location.search+location.hash);</script><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f5f4ee"><meta name="description" content="Buddy is a meeting workspace for transcription, notes and answers from your meetings and documents.">
 <meta name="page-type" content="software"><meta name="site-kind" content="software">
 <meta property="og:title" content="Buddy — Stay with the conversation."><meta property="og:description" content="Meeting notes, transcripts and the context behind them."><meta property="og:type" content="website"><meta property="og:url" content="https://meetbuddy.me"><meta property="og:image" content="https://meetbuddy.me/site/social.png?v=hands-2"><meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://meetbuddy.me"><link rel="icon" href="/buddy.png" type="image/png">
 <link rel="preload" href="/site/geist.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/site/editorial-italic.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="/site/style.css?v=compact-1"><title>Buddy — Stay with the conversation.</title>
+<link rel="stylesheet" href="/site/style.css?v=download-1"><title>Buddy — Stay with the conversation.</title>
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header wrap">
  <a href="#top" class="wordmark" aria-label="Buddy home"><img src="/brand/keepsake-mark.png" width="29" height="29" alt="">buddy<span>.</span></a>
  <nav class="desktop-nav" aria-label="Main navigation"><a href="#product">The workspace</a><a href="#privacy">Your setup</a></nav>
- <div class="header-actions"><a href="/app/?demo=home" class="button primary compact">Explore Buddy <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
+ <div class="header-actions"><a class="github-link" href="https://github.com/ilinii/buddy" target="_blank" rel="noopener noreferrer" aria-label="Buddy on GitHub, 0 stars"><span class="github-name">GitHub</span><span class="github-star" aria-hidden="true">★</span><span class="github-count">0</span></a><a href="https://github.com/ilinii/buddy/releases/download/v0.1.0-preview.1/Buddy-0.1.0-Windows-Setup.exe" class="button primary compact" aria-label="Download Buddy for Windows">Download now <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
 </header>
 <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#product">The workspace <span>01</span></a><a href="#privacy">Your setup <span>03</span></a><a href="/app/?demo=home">Explore Buddy ↗</a></nav>
 <main id="main">
@@ -24,7 +24,7 @@
    <p class="eyebrow"><span class="status-dot"></span> A LITTLE HELP FOR EVERY MEETING</p>
    <h1 id="hero-title">Stay with the<br><em>conversation.</em></h1>
    <p class="hero-description">Meeting notes, next steps and answers in context.</p>
-   <a class="button primary hero-action" href="/app/?demo=home">Explore Buddy <span aria-hidden="true">↗</span></a>
+   <a class="button primary hero-action" href="https://github.com/ilinii/buddy/releases/download/v0.1.0-preview.1/Buddy-0.1.0-Windows-Setup.exe" aria-label="Download Buddy for Windows">Download now <span aria-hidden="true">↓</span></a><p class="download-platform">Windows x64 · Preview</p>
   </div>
   <!-- live demo:start -->
   <div class="voice-demo app-frame" id="voice-demo" data-gateway="https://buddy-voice-trial.lovely-ash-3133.chatgpt.site" aria-labelledby="voice-title" data-state="idle" data-visual>
@@ -35,11 +35,10 @@
  </section>
  <section class="workflow section-dark" id="product" aria-labelledby="workflow-title">
   <div class="wrap workspace-layout">
-   <div class="section-heading"><p class="eyebrow">01 / THE WORKSPACE</p><h2 id="workflow-title">Your meeting.<br><em>All the context.</em></h2><p>Record, review and ask about your meetings and documents in one place.</p></div>
+   <div class="section-heading"><p class="eyebrow">01 / THE WORKSPACE</p><h2 id="workflow-title">Your meeting.<br><em>All the context.</em></h2><p>Record your meeting, then ask across your conversations and documents.</p></div>
    <div class="workspace-tour" data-visual>
     <div class="workflow-steps" role="tablist" aria-label="Explore the meeting workspace">
      <button role="tab" id="step-record" aria-selected="true" aria-controls="workflow-panel" data-step="record">Record</button>
-     <button role="tab" id="step-review" aria-selected="false" aria-controls="workflow-panel" tabindex="-1" data-step="review">Review</button>
      <button role="tab" id="step-ask" aria-selected="false" aria-controls="workflow-panel" tabindex="-1" data-step="ask">Ask your context</button>
     </div>
     <div class="workflow-visual app-frame" role="tabpanel" tabindex="0" id="workflow-panel" aria-labelledby="step-record"><div class="demo-window-top"><span class="preview-brand"><img src="/brand/keepsake-mark.png" width="17" height="17" alt="">buddy.</span><span>ILLUSTRATIVE MEETING</span></div><div class="demo-workspace-body" id="workflow-screen"></div></div>
@@ -48,11 +47,11 @@
  </section>
  <section class="privacy-section" id="privacy" aria-labelledby="privacy-title">
   <div class="wrap setup-layout">
-   <div class="privacy-copy"><p class="eyebrow">03 / CHOOSE YOUR SETUP</p><h2 id="privacy-title">Your AI.<br><em>On your terms.</em></h2><p>Buddy handles it for you.<br>Or connect your own API keys.</p></div>
+   <div class="privacy-copy"><p class="eyebrow">03 / CHOOSE YOUR SETUP</p><h2 id="privacy-title">Your AI.<br><em>On your terms.</em></h2><p>Buddy handles it for you.<br>Or use it locally for free.</p></div>
    <div class="setup-card app-frame" data-visual>
     <div class="setup-tabs" role="tablist" aria-label="Explore Buddy setup options">
      <button id="setup-managed" role="tab" aria-selected="true" aria-controls="setup-panel" data-setup="managed">Buddy handles it</button>
-     <button id="setup-keys" role="tab" aria-selected="false" aria-controls="setup-panel" tabindex="-1" data-setup="keys">Your API keys</button>
+     <button id="setup-keys" role="tab" aria-selected="false" aria-controls="setup-panel" tabindex="-1" data-setup="keys">Use locally for free</button>
     </div>
     <div id="setup-panel" class="setup-panel" role="tabpanel" aria-labelledby="setup-managed" tabindex="0">
      <span class="setup-status">COMING SOON</span><h3>Buddy handles it for you.</h3><div class="setup-price"><span>Starting at</span><strong>$8.90</strong><span>/ month</span></div><p>Transcription and answers, with no separate provider accounts to manage.</p>
@@ -62,15 +61,20 @@
   </div>
  </section>
  <section class="questions-section wrap" id="questions" aria-labelledby="questions-title">
-  <h2 id="questions-title">A few questions.</h2><div class="faq-list">
-   <details><summary>Does a bot join my meeting?<span aria-hidden="true">+</span></summary><p>No. Buddy records through your device. Always let participants know before recording.</p></details>
-   <details><summary>What can I try today?<span aria-hidden="true">+</span></summary><p>The live speech demo above and the browser workspace with sample meetings, editable notes and local source search. Buddy-managed subscriptions are coming soon.</p></details>
-   <details><summary>Which devices can I use?<span aria-hidden="true">+</span></summary><p>Windows is the first desktop build. macOS and iPhone versions still need device testing. The browser workspace works on desktop and mobile; device workspaces currently stay separate.</p></details>
+  <div><p class="eyebrow">A FEW THINGS WORTH ASKING</p><h2 id="questions-title">Before your<br><em>first meeting.</em></h2></div>
+  <div class="faq-list">
+   <details><summary>What exactly is Buddy?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>A meeting workspace for recording conversations, writing your own notes, reviewing transcripts and asking questions across previous meetings and documents. Answers link back to their sources.</p></div></details>
+   <details><summary>Does a bot join my meeting?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>No. Buddy records through your device, using the audio sources you select. Let participants know before recording.</p></div></details>
+   <details><summary>Can I use Buddy locally for free?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. The Windows preview includes local speech recognition, editable notes and local source search. Optional cloud transcription and AI answers use your own provider keys; provider limits or costs can apply.</p></div></details>
+   <details><summary>Can I ask about documents and older meetings?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Yes. Add documents and keep your meetings in Buddy, then ask from a meeting. Buddy retrieves relevant context and keeps source links alongside its answers. Cloud document processing needs your separate permission.</p></div></details>
+   <details><summary>Where do my notes and recordings go?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>Your workspace is saved on your device. Keeping audio is optional. On-device transcription stays local; a cloud provider receives the audio or context you authorize. The website voice trial keeps no audio or transcript in its application storage.</p></div></details>
+   <details><summary>What does “Buddy handles it” include?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>The planned managed option brings transcription and AI answers together without separate provider accounts. Pricing starts at $8.90/month. It is coming soon; the current website does not take payments or create managed accounts.</p></div></details>
+   <details><summary>Which devices can I use?<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>The download is an unsigned Windows x64 preview. macOS and iPhone builds still need platform and device testing. You can also explore the <a href="/app/?demo=home">browser workspace</a>; device workspaces currently stay separate.</p></div></details>
   </div>
  </section>
 </main>
 <footer class="site-footer wrap"><a href="#top" class="wordmark" aria-label="Return to Buddy home">buddy<span>.</span></a><div><a href="https://github.com/ilinii/buddy" target="_blank" rel="noopener noreferrer">Source · AGPL-3.0</a><a href="/privacy.html">Privacy</a><span>© <span id="year">2026</span> Buddy</span></div></footer>
 <button class="motion-toggle" id="motion-toggle" aria-pressed="false" aria-label="Pause ambient animation"><span aria-hidden="true">Ⅱ</span><span class="motion-label">Pause motion</span></button>
 <dialog id="source-dialog" class="source-dialog"><div class="source-dialog-top"><span id="source-kind">MEETING TRANSCRIPT</span><button aria-label="Close source" class="close-source">×</button></div><h2 id="source-title">Product check-in</h2><p class="source-location" id="source-location">04:12 · Final transcript</p><blockquote id="source-quote"></blockquote><p class="source-disclaimer">Fictional content used to demonstrate source checking.</p><a href="/app/?demo=home" class="button primary">Explore Buddy <span aria-hidden="true">↗</span></a></dialog>
-<script type="module" src="/site/main.js?v=compact-1"></script>
+<script type="module" src="/site/main.js?v=download-1"></script>
 </body></html>
